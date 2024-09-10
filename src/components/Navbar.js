@@ -1,13 +1,14 @@
 import React from 'react';
 import './Navbar.css';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
     return(
     <nav id="navbar">
        <ul className="nav-links"> 
-          <li><a href="#welcome-section">Welcome</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact Me</a></li>
+          <li><Link to="/">HomePage</Link></li>
+          <li><Link to="/Projects">Projects</Link></li>
+          <li><Link to="/Contact">Contact Me</Link></li>
           <li><a id="profile-link" href="https://github.com/vaibhavmish" target="_blank" rel="noopener noreferrer">GitHub</a></li>
        </ul>     
     </nav>

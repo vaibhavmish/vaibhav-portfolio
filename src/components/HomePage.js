@@ -1,12 +1,14 @@
 import React from 'react';
-import "./welcomeSection.css";
+import "./HomePage.css";
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import AboutMe from './AboutMe.js'
 
-function WelcomeSection(){
+function HomePage(){
 	return(
    <section id="welcome-section">
       <h1>Vaibhav Mishra</h1>
-      <p>Hello, I am a Web Developer</p>
+      <p id="hello">Hello, I am a <b><i>Web Developer</i></b></p>
+      <AboutMe/>
       <span className="link"><a id="gitHub-link" href="https://github.com/vaibhavmish" target="_blank" rel="noopener noreferrer">
         <FaGithub/>
       </a>
@@ -19,4 +21,4 @@ function WelcomeSection(){
     )
 }
 
-export default WelcomeSection;
+export default HomePage;
