@@ -4,7 +4,6 @@ import './Navbar.css';
 function Navbar() {
     return(
     <nav id="navbar">
-       <h1 id="logo">Vaibhav Mishra</h1>
        <ul className="nav-links"> 
           <li><a href="#welcome-section">Welcome</a></li>
           <li><a href="#projects">Projects</a></li>
