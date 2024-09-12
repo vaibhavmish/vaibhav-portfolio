@@ -53,3 +53,11 @@
   margin-bottom: 20px;
   font-size: 2rem;
 }
+
+.project-video {
+  width: 90%;
+  height: 50%;
+  border-bottom: 1px solid #ddd;
+  padding-top: 20px;
+  border: none;
+}

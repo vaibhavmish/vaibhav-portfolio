@@ -3,9 +3,13 @@ import './Projects.css';
 import projectData from "./projectsData.js";
 
 
-const Project =({title, description, image})=>(
+const Project =({title, description, video, image})=>(
 	<div className="project-card">
-	  <img src ={image} alt={title} className="project-image" />
+    {video?( 
+    <video autoPlay muted loop src={video} className="project-video"></video>
+    )
+	  :(<img src ={image} alt={title} className="project-image" />
+    )}
 	  <h3 className="project-title">{title}</h3>
 	  <p className="project-description">{description}</p>
 	</div>
@@ -22,6 +26,7 @@ const Projects = () => {
             title={project.title}
             description={project.description}
             image={project.imageUrl}
+            video={project.videoUrl}
           />
         ))}
       </div>
