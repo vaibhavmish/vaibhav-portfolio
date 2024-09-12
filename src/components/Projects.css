@@ -1,0 +1,55 @@
+.projects-section {
+  padding: 20px;
+  background: linear-gradient(45deg, cyan, pink, transparent);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.project-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 10px;
+  background: linear-gradient(120deg,cyan,darkgray,paleturquoise,transparent);
+}
+
+.project-image {
+  width: 90%;
+  height: 50%;
+  border-bottom: 1px solid #ddd;
+  padding-top: 20px;
+}
+
+.project-title {
+  margin: 10px 0;
+  font-size: 1.25rem;
+}
+
+.project-description {
+   font-size: 1.1rem;
+    color: #800;
+    padding-top: 20px;
+    height: 8vh;
+}
+.projects-section {
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
