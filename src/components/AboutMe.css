@@ -1,0 +1,7 @@
+.about-section p {
+  font-size: 1.2em; /* Slightly larger than normal text */
+  color: #666; /* Medium gray color */
+  line-height: 1.6; /* Improve readability */
+  max-width: 800px; /* Limit text width for better readability */
+  margin: 0 auto; /* Center the text horizontally */
+}
