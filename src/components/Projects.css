@@ -25,6 +25,10 @@
   background: linear-gradient(120deg,cyan,darkgray,paleturquoise,transparent);
 }
 
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
 .project-image {
   width: 90%;
   height: 50%;

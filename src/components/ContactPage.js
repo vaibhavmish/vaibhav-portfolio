@@ -2,18 +2,15 @@ import React, { useState } from "react";
 import "./ContactPage.css"; // Import your CSS for styling
 
 const Contact = () => {
-  // State to manage form inputs
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
     message: "",
-});
+  });
 
-  // State to manage form submission status
   const [formStatus, setFormStatus] = useState("");
 
-  // Handle input changes
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -21,28 +18,46 @@ const Contact = () => {
     });
   };
 
-  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
       setFormStatus("Please enter a valid email address.");
       return;
     }
 
-    // Here, handle form submission logic (e.g., sending an email)
-    // You can use Formspree, EmailJS, or your back-end API.
-
-    // Clear the form and display success message
-    setFormData({ name: "", email: "", subject: "", message: "" });
-    setFormStatus("Message sent successfully!");
+    // Send form data to Formspree
+    fetch("https://formspree.io/f/mpwaenrk", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+      }),
+    })
+      .then((response) => {
+        if (response.ok) {
+          setFormStatus("Message sent successfully!");
+          setFormData({ name: "", email: "", subject: "", message: "" });
+        } else {
+          setFormStatus("Failed to send message. Please try again.");
+        }
+      })
+      .catch((error) => {
+        setFormStatus("An error occurred. Please try again.");
+      });
   };
 
   return (
     <div className="contact-section">
       <h2>Contact Me</h2>
-      <p>If you'd like to get in touch, feel free to send me a message.</p>
+      <p>If you'd like to get in touch, feel free to send me a message using the form below.</p>
 
       {/* Display form status messages */}
       {formStatus && <p className="form-status">{formStatus}</p>}

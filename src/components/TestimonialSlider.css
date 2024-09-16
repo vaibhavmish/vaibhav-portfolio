@@ -1,0 +1,29 @@
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slick-slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slick-track {
+  display: flex;
+  align-items: center;
+}
+
+.testimonial {
+  width: 100%;
+  max-width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: auto;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  text-align: center;
+}
+
+html, body {
+  overflow-x: hidden;
+}
