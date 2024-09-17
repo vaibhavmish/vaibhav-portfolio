@@ -1,4 +1,4 @@
-#navbar {
+.navbar {
   background:linear-gradient(45deg,pink 18%, cyan 10%,pink 10% ,transparent, cyan, gray, pink);
   position: fixed;
   width: 100%;
@@ -8,7 +8,13 @@
   align-items: center;
   padding: 1rem;
   z-index: 1000;
+  transition: top 0.3s ease;
 }
+
+.hidden {
+  top: -100px;  /* Move the navbar out of view */
+}
+
 
 #logo{
     color:black;
