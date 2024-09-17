@@ -1,6 +1,9 @@
 .projects-section {
   padding: 20px;
   background: linear-gradient(45deg, cyan, pink, transparent);
+   display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .section-title {
@@ -15,6 +18,11 @@
   gap: 20px;
 }
 
+.project-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .project-card {
   background: white;
   border-radius: 8px;

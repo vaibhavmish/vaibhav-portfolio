@@ -18,7 +18,6 @@ const Project =({title, description, video, image})=>(
 const Projects = () => {
   return (
     <section className="projects-section">
-      <h2 className="section-title">My Projects</h2>
       <div className="projects-grid">
         {projectData.map(project => (
           <Project
